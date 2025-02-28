@@ -1,41 +1,149 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2B2E4A, #0B0C13);
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 300vh; /* Ensures full-page coverage */
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-header {
-    background-color: #333;
+    font-family: 'Poppins', sans-serif;
     color: white;
-    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    padding: 50px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+/* Radial Glow Effect */
+.radial-glow {
+    position: absolute;
     width: 100%;
+    height: 100vh; /* Covers full viewport height */
+    top: 40vh; /* Moves glow slightly up */
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.126) 0%, rgba(0, 0, 0, 0) 60%);
+    filter: blur(100px); /* Heavy blur effect */
+    pointer-events: none;
 }
+
+
+
+/* === Navbar Styles === */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Gives a subtle glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-container {
+    width: 90%;
+    /* max-width: 1200px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* === Navbar Links === */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0 0;
+    margin-left: auto; /* Pushes links to the right */
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #2B2E4A; /* Highlight Color */
+}
+
+/* === Resume Button (Animated) === */
+.resume-btn {
+    text-decoration: none;
+    color: #2B2E4A;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin-left: 60px; 
+}
+
+.resume-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+
+
+/* === Home Section === */
+#home {
+    min-height: 70vh; /* Takes at least 70% of viewport height */
+    display: flex;
+    justify-content: space-between; /* Creates space between text and image */
+    align-items: center; /* Centers vertically */
+    gap: 80px; /* Increases space between text and image */
+    padding: 120px 13%; /* Less left/right distance */
+}
+
+/* Common container for text and image */
+.home-container {
+    display: flex;
+    align-items: center; /* Aligns content properly */
+    gap: 50px; /* Space between text and image */
+}
+
+/* Text container */
+.home-text {
+    max-width: 700px; /* Slightly reduced width for better balance */
+}
+
+/* Refined Text Sizes */
+.home-text p {
+    font-size: 1.1rem; /* Slightly reduced paragraph size */
+    color: #ffffff; /* Adjust text color for readability */
+}
+
+.home-text h1 {
+    font-size: 2.5rem; /* Reduced heading size */
+    font-weight: bold;
+    line-height: 1.2; /* Slightly tighter spacing */
+    color: #ffffff;
+}
+
+/* Image container */
+.home-image img {
+    width: 480px; /* Slightly smaller image */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+

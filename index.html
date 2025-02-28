@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jivesh Gawde - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="radial-glow"></div> 
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">JG</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="resume.pdf" class="resume-btn">Resume</a>
+      </div>
+    </nav>
 
-    <header>
-        <h1>Jivesh Gawde</h1>
-        <p>Data Scientist | Data Analyst | AI Engineer</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Showcasing my work in Python, R, and AI development.</p>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="home-text">
+        <p>Hi, my name is</p>
+        <h1>
+          <span
+            >Jivesh Gawde. <br />
+            I extract insights from data.</span
+          >
+        </h1>
+        <p>
+          I’m a data analyst specializing in extracting insights through data
+          using tools like R, Excel, Python, and Tableau.
+        </p>
+      </div>
+      <div class="home-image">
+        <img src="assets\design.png" alt="Jivesh Gawde" />
+      </div>
     </section>
-
-    <footer>
-        <p>© 2025 Jivesh Gawde | <a href="contact.html">Contact Me</a></p>
-    </footer>
-
-</body>
-</html> 
+  </body>
+</html>
